@@ -1,20 +1,54 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from "react-native";
+import { PaperProvider } from "react-native-paper";
+import { Divider } from "react-native-paper";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <PaperProvider>
+      <View style={styles.container}>
+        <Text style={styles.title}>Ufjf</Text>
+        <Divider style={styles.divider} />
+        <Text style={styles.subtitle}>Desenvolvimento Mobile</Text>
+        <View style={styles.main}>
+          <Text style={styles.text}>Ola mundo!</Text>
+        </View>
+      </View>
+    </PaperProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: "100%",
+    paddingVertical: 100,
+    paddingHorizontal: 10,
+    gap: 10,
+    backgroundColor: "#fcac03",
+    alignItems: "center",
   },
+  title: {
+    fontSize: 60,
+    fontWeight: "bold",
+    color: "#8f1414",
+  },
+  subtitle: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "#8f1414",
+  },
+  text: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "#000000",
+  },
+  divider: {
+    width: "80%",
+    backgroundColor: "#000000",
+    height: 3,
+  },
+  main: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  }
 });
