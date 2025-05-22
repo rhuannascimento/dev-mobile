@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import { PaperProvider } from "react-native-paper";
 import { Divider } from "react-native-paper";
-import HelloWorldComponent from "./components/HelloWorldComponent";
+import FetchCitiesComponent from "./components/FetchCitiesComponent";
 export default function App() {
 
   return (
@@ -11,7 +11,7 @@ export default function App() {
         <Divider style={styles.divider} />
         <Text style={styles.subtitle}>Desenvolvimento Mobile</Text>
         <View style={styles.main}>
-          <HelloWorldComponent date={(new Date()).toLocaleDateString()} />
+          <FetchCitiesComponent />
         </View>
       </View>
     </PaperProvider>
