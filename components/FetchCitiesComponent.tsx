@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { ActivityIndicator, Button, TextInput } from "react-native-paper";
 
-export default function HelloWorldComponent() {
+export default function HelloWorldComponent({ showDetails }: { showDetails: boolean }) {
     const [uf, setUf] = useState("");
     const [error, setError] = useState("");
     const [cities, setCities] = useState([] as {id: number, nome: string}[]);
@@ -49,7 +49,7 @@ export default function HelloWorldComponent() {
                 <ScrollView style={{ maxHeight: 200, width: "100%"}}>
                     {cities.map((city) => (
                         <Text key={city.id} style={styles.text}> 
-                            {city.nome}
+                            {showDetails ? `ID: ${city.id} - Nome: ${city.nome}` : city.nome}
                         </Text>
                     ))}
                 </ScrollView>
