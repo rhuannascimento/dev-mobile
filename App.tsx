@@ -5,6 +5,7 @@ import { PaperProvider } from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import MainComponent from "./components/MainComponent";
+import FireBaseComponent from "./components/FirebaseComponent";
 
 const Drawer = createDrawerNavigator();
 
@@ -18,6 +19,9 @@ export default function App() {
           </Drawer.Screen>
           <Drawer.Screen name="Detalhado">
             {() => <MainComponent showDetails={true} />}
+          </Drawer.Screen>
+          <Drawer.Screen name="Firebase">
+            {() => <FireBaseComponent />}
           </Drawer.Screen>
         </Drawer.Navigator>
       </NavigationContainer>
