@@ -2,12 +2,12 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import { PaperProvider } from "react-native-paper";
 import { Divider } from "react-native-paper";
 import FetchCitiesComponent from "./FetchCitiesComponent";
-export default function MainComponent({ showDetails }: { showDetails: boolean }) {
+export default function FetchCitiesMainComponent({ showDetails }: { showDetails: boolean }) {
 
   return (
     <PaperProvider>
       <View style={styles.container}>
-        <Image style={styles.image} source={{uri: "https://upload.wikimedia.org/wikipedia/commons/7/71/Logo_da_UFJF.png"}} />
+        <Text style={styles.title}>Buscador de cidades</Text>
         <Divider style={styles.divider} />
         <Text style={styles.subtitle}>Desenvolvimento Mobile</Text>
         <View style={styles.main}>
@@ -27,6 +27,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#fcac03",
     alignItems: "center",
   },
+   title: {
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "#8f1414",
+    textAlign: 'center',
+  },
   subtitle: {
     fontSize: 15,
     fontWeight: "bold",
@@ -36,10 +42,6 @@ const styles = StyleSheet.create({
     width: "80%",
     backgroundColor: "#000000",
     height: 3,
-  },
-  image: {
-    width: 220,
-    height: 120,
   },
   main: {
     flex: 1,

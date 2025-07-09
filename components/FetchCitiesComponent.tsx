@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { ActivityIndicator, Button, TextInput } from "react-native-paper";
 
-export default function HelloWorldComponent({ showDetails }: { showDetails: boolean }) {
+export default function FetchCitiesComponent({ showDetails }: { showDetails: boolean }) {
     const [uf, setUf] = useState("");
     const [error, setError] = useState("");
     const [cities, setCities] = useState([] as {id: number, nome: string}[]);
