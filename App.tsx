@@ -6,6 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import MainComponent from "./components/MainComponent";
 import FireBaseComponent from "./components/FirebaseComponent";
+import CounterMainComponent from "./components/CounterMainComponent";
 
 const Drawer = createDrawerNavigator();
 
@@ -13,15 +14,18 @@ export default function App() {
   return (
     <PaperProvider>
       <NavigationContainer>
-        <Drawer.Navigator initialRouteName="Resumido">
-          <Drawer.Screen name="Resumido">
+        <Drawer.Navigator initialRouteName="Buscador de cidades resumido">
+          <Drawer.Screen name="Buscador de cidades resumido">
             {() => <MainComponent showDetails={false} />}
           </Drawer.Screen>
-          <Drawer.Screen name="Detalhado">
+          <Drawer.Screen name="Buscador de cidades detalhado">
             {() => <MainComponent showDetails={true} />}
           </Drawer.Screen>
           <Drawer.Screen name="Firebase">
             {() => <FireBaseComponent />}
+          </Drawer.Screen>
+          <Drawer.Screen name="Contador">
+            {() => <CounterMainComponent />}
           </Drawer.Screen>
         </Drawer.Navigator>
       </NavigationContainer>
