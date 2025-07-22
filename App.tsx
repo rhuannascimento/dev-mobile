@@ -9,6 +9,7 @@ import CounterMainComponent from "./components/CounterMainComponent";
 import FetchCitiesMainComponent from "./components/FetchCitiesMainComponent";
 import HomePage from "./components/HomePage";
 import ConfigPage from "./components/ConfigPage";
+import SensorComponent from "./components/SensorComponent";
 
 const Drawer = createDrawerNavigator();
 
@@ -31,6 +32,9 @@ export default function App() {
           </Drawer.Screen>
           <Drawer.Screen name="Contador">
             {() => <CounterMainComponent />}
+          </Drawer.Screen>
+          <Drawer.Screen name="Sensores">
+            {() => <SensorComponent />}
           </Drawer.Screen>
           <Drawer.Screen name="Configurações">
             {() => <ConfigPage />}
