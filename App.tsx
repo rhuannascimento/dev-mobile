@@ -10,6 +10,7 @@ import FetchCitiesMainComponent from "./components/FetchCitiesMainComponent";
 import HomePage from "./components/HomePage";
 import ConfigPage from "./components/ConfigPage";
 import SensorComponent from "./components/SensorComponent";
+import MoveBallComponent from "./components/MoveBallComponent";
 
 const Drawer = createDrawerNavigator();
 
@@ -35,6 +36,9 @@ export default function App() {
           </Drawer.Screen>
           <Drawer.Screen name="Sensores">
             {() => <SensorComponent />}
+          </Drawer.Screen>
+          <Drawer.Screen name="Jogo da Bolinha">
+            {() => <MoveBallComponent />}
           </Drawer.Screen>
           <Drawer.Screen name="Configurações">
             {() => <ConfigPage />}
